@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sanrio Online Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playwrite+IT+Moderna:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="mensaje-exito" class="mensaje oculto">Producto agregado al carrito</div>
+
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="font-family: 'Pacifico', cursive; font-size: 1.8rem; display: flex; align-items: center; justify-content: flex-start; width: 100%;">
+                <img src="https://www.remambo.jp/img/sanrio-logo.png" alt="Logo Sanrio" width="90" height="50" class="d-inline-block align-text-top" style="position: absolute; top: 10px; left: 10px;">
+                <span style="margin-left: 100px;">Sanrio Online Shop</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ordenes.html">My Orders</a></li>
+                </ul>
+                <form id="search-form" class="d-flex">
+                    <input id="search-input" class="form-control me-2" type="search" placeholder="Search">
+                    <button class="btn-search" type="submit">Search</button>
+                </form>
+                <a class="nav-link cart" href="carrito.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-counter" class="badge">0</span>
+                </a>
+                <a href="#" class="nav-link account" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    <i class="fas fa-user"></i> My Account
+                </a>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Log In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="form-group mb-3">
+                            <label for="loginEmail">Email</label>
+                            <div class="input-group">
+                                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your Email" required>
+                                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            </div>
+                        </div>                        
+                        <div class="form-group mb-3">
+                            <label for="loginPassword">Password</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
+                                <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success w-100 login-btn">Log In!</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p class="mb-0">Don't have an account? 
+                        <a href="#" class="modal-link switch-to-signup">Sign Up!</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signInForm">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
+                                  </div>                              
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Password" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password" required>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                            <button type="submit" class="btn btn-primary signup-btn">Sign Up!</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p class="mb-0">Already have an account? 
+                        <a href="#" class="modal-link switch-to-login">Log In!</a>
+                    </p>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Perfil (My Account) -->
+<div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="accountModalLabel">My Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="accountInfo">
+          <!-- Aquí se llenará con JS -->
+        </div>
+
+        <form id="editProfileForm" class="mt-3" style="display:none;">
+            <input type="text" id="editNombre" class="form-control mb-2" placeholder="Name" required>
+            <input type="text" id="editApellido" class="form-control mb-2" placeholder="Last Name" required>
+            <input type="email" id="editEmail" class="form-control mb-2" placeholder="Email" required>
+        
+            <hr>
+            <input type="password" id="editPassword" class="form-control mb-2" placeholder="New Password (optional)">
+            <input type="password" id="confirmPassword" class="form-control mb-2" placeholder="Confirm New Password">
+        
+            <button type="submit" class="btn btn-success w-100">Save Changes</button>
+        </form>        
+
+      </div>
+    </div>
+  </div>  
+
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://i.pinimg.com/736x/2a/b0/fa/2ab0fa2eca7f39733c1ea77e534c6584.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/10/75/3d/10753d64c5d5a58fb560f4b9b24c316a.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://i.pinimg.com/736x/3b/7d/a2/3b7da20b55a0b2d0fdbcb65cc599c633.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div id="productos-container" class="row">
+        <!-- Los productos se añadirán aquí -->
+    </div>
+
+    <div id="paginacion-container" class="pagination"></div>
+
+    <script defer src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

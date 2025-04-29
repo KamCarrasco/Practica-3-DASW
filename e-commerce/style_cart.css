@@ -1,0 +1,220 @@
+body {
+    background-color: #fad2e0;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#search-form {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    display: flex;
+    width: auto;
+}
+
+#search-input {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    width: 250px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc !important;
+    padding: 8px;
+    outline: none;
+}
+
+.btn-search {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    background-color: #fad2e0 !important;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #ccc !important;
+    padding: 8px 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #f8b7cc !important;
+}
+
+.cart {
+    position: relative;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+.badge {
+    background-color: #fad2e0;
+    color: black;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 0.8rem;
+}
+
+.account {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold !important;
+    color: black;
+}
+
+.cart-item {
+    background-color: white; /* Fondo blanco */
+    border-radius: 15px; /* Esquinas redondeadas */
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre elementos */
+}
+
+.cart-item img {
+    width: 80px; /* Tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-item div {
+    flex: 1;
+}
+
+.cart-item h5 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cart-item p {
+    margin: 5px 0;
+}
+
+.update-quantity {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-success {
+    background-color: #fad2e0;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.btn-success:hover {
+    background-color: #f8b7cc;
+}
+
+.btn-danger {
+    background-color: #ed4d4d; /* Rojo */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 10px;
+}
+
+.btn-danger:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+}
+
+.close-btn, .close-login {
+    float: right;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-btn:hover, .close-login:hover {
+    color: red;
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #fad2e0;
+    color: #333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+}
+
+.btn-close {
+    color: black !important;
+    filter: none;
+}
+
+.login-btn, .signup-btn {
+    background-color: #fad2e0;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #ffb6c1;
+}
+
+.modal-link {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-link:hover {
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

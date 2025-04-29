@@ -1,0 +1,139 @@
+# Registro usuario cliente
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "nombre": "Usuario",
+  "apellido": "Prueba",
+  "email": "cliente@example.com",
+  "password": "123456",
+  "rol": "client"
+}
+
+###
+
+# Registro usuario admin
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "nombre": "Admin",
+  "apellido": "Prueba",
+  "email": "admin@example.com",
+  "password": "admin123",
+  "rol": "admin"
+}
+
+###
+
+# Login cliente
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "email": "cliente@example.com",
+  "password": "123456"
+}
+
+###
+
+# Login admin
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "admin123"
+}
+
+###
+
+# Validar token
+GET http://localhost:3000/api/users/validate-token
+Authorization: Bearer {{TOKEN}}
+
+###
+
+# Crear producto (admin)
+POST http://localhost:3000/api/productos
+Content-Type: application/json
+Authorization: Bearer {{TOKEN_ADMIN}}
+
+{
+  "nombre": "Hello Kitty Peluche",
+  "precio": 199.99,
+  "categoria": "Peluches",
+  "imagen": "https://example.com/hellokitty.jpg",
+  "stock": 10
+}
+
+###
+
+# Obtener todos los productos
+GET http://localhost:3000/api/productos
+
+###
+
+# Editar producto (admin)
+PUT http://localhost:3000/api/productos/{{ID_PRODUCTO}}
+Content-Type: application/json
+Authorization: Bearer {{TOKEN_ADMIN}}
+
+{
+  "nombre": "Hello Kitty Peluche Grande",
+  "precio": 249.99,
+  "categoria": "Peluches",
+  "imagen": "https://example.com/hellokitty_grande.jpg",
+  "stock": 15
+}
+
+###
+
+# Eliminar producto (admin)
+DELETE http://localhost:3000/api/productos/{{ID_PRODUCTO}}
+Authorization: Bearer {{TOKEN_ADMIN}}
+
+###
+
+# Crear orden (cliente)
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "items": [
+    {
+      "name": "Hello Kitty Peluche",
+      "quantity": 2,
+      "price": 199.99,
+      "image": "https://example.com/hellokitty.jpg"
+    }
+  ],
+  "total": 429.98
+}
+
+###
+
+# Obtener ordenes (cliente)
+GET http://localhost:3000/api/orders
+Authorization: Bearer {{TOKEN}}
+
+###
+
+# Editar perfil usuario
+PUT http://localhost:3000/api/users/me
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "nombre": "NuevoNombre",
+  "apellido": "NuevoApellido",
+  "email": "nuevocorreo@example.com",
+  "password": "nuevacontraseña"
+}
+
+###
+
+# Obtener todos los usuarios (admin)
+GET http://localhost:3000/api/users
+Authorization: Bearer {{TOKEN_ADMIN}}

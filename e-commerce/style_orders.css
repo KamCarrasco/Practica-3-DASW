@@ -1,0 +1,177 @@
+body {
+    background-color: #fad2e0;
+    font-family: 'Playwrite IT Moderna', sans-serif !important;
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#search-form {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    display: flex;
+    width: auto;
+}
+
+#search-input {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    width: 250px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc !important;
+    padding: 8px;
+    outline: none;
+}
+
+.btn-search {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    background-color: #fad2e0 !important;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #ccc !important;
+    padding: 8px 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #f8b7cc !important;
+}
+
+.cart {
+    position: relative;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+.badge {
+    background-color: #fad2e0;
+    color: black;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 0.8rem;
+}
+
+.account {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold !important;
+    color: black;
+}
+
+h2 {
+    color: #ff69b4;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #ffb6c1;
+    color: white;
+    font-weight: bold;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+button.btn-primary {
+    background-color: #ff69b4;
+    border: none;
+}
+
+button.btn-primary:hover {
+    background-color: #ff4081;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.btn-link {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    background-color: #fad2e0;
+    color: #333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+}
+
+.btn-close {
+    color: black !important;
+    filter: none;
+}
+
+.login-btn, .signup-btn {
+    background-color: #fad2e0;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #ffb6c1;
+}
+
+.modal-link {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-link:hover {
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}

@@ -1,0 +1,272 @@
+/* Asegura que las imágenes del carrusel no se deformen */
+.carousel-inner img {
+    object-fit: cover;
+    height: 50vh;
+}
+
+/* Fondo de la página */
+body {
+    background-color: #fad2e0 !important;
+}
+
+/* Ajustes para que el carrusel sea responsivo */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-inner img {
+        height: 30vh;
+    }
+}
+
+.navbar-nav .nav-link {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#search-form {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    display: flex;
+    width: auto;
+}
+
+#search-input {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    width: 250px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #ccc !important;
+    padding: 8px;
+    outline: none;
+}
+
+.btn-search {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold;
+    background-color: #fad2e0 !important;
+    border-radius: 0 10px 10px 0;
+    border: 1px solid #ccc !important;
+    padding: 8px 15px;
+    color: black;
+    cursor: pointer;
+}
+
+.btn-search:hover {
+    background-color: #f8b7cc !important;
+}
+
+.cart {
+    position: relative;
+    margin-left: 15px;
+    margin-right: 25px;
+}
+
+.badge {
+    background-color: #fad2e0;
+    color: black;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 0.8rem;
+}
+
+.account {
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: bold !important;
+    color: black;
+}
+
+#productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 0 15px;
+}
+
+.card {
+    width: 250px;
+    min-height: 350px;
+    border-radius: 15px; /* Asegura uniformidad */
+    overflow: hidden; /* Evita que los elementos internos sobresalgan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    background-color: white;
+    margin: 10px;
+    align-content: center !important;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-body {
+    text-align: center;
+    align-content: center !important;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    padding: 10px;
+    margin: 0; /* Asegura que no haya márgenes extras */
+}
+
+.btn-add-to-cart {
+    display: block; /* Asegura que ocupe todo el ancho disponible */
+    margin: 0 auto; /* Centra el botón */
+    text-align: center; /* Centra el texto */
+    background-color: #f8b7cc !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 15px;
+    width: 80%; /* Ajusta el ancho para que no ocupe todo el borde */
+}
+
+.btn-add-to-cart:hover {
+    background-color: #f8b7cc !important;
+}
+
+#mensaje-exito {
+    position: fixed;
+    top: 20px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #f497b5;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family: 'Playwrite IT Moderna', sans-serif;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+.mostrar {
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+.oculto {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    background-color: #f8b7cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:hover {
+    background-color: #f497b5;
+}
+
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Playwrite IT Moderna', sans-serif !important;
+}
+
+.modal-header {
+    background-color: #fad2e0;
+    color: #333;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+}
+
+.btn-close {
+    color: black !important;
+    filter: none;
+}
+
+.login-btn, .signup-btn {
+    background-color: #fad2e0;
+    border: none;
+    color: black;
+    font-weight: bold;
+}
+
+.login-btn:hover, .signup-btn:hover {
+    background-color: #ffb6c1;
+}
+
+.modal-link {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-link:hover {
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.toast-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #198754;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s, transform 0.5s;
+    z-index: 9999;
+    font-weight: bold;
+}
+
+.toast-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
